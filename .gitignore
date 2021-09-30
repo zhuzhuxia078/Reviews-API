@@ -105,3 +105,9 @@ dist
 
 
 package-lock.json
+
+# ignore with path
+/server/db/characteristic_reviews.csv
+
+# ignore csv file
+*.csv
