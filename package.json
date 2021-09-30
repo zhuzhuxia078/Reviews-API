@@ -1,0 +1,30 @@
+{
+  "name": "reviews-api",
+  "version": "1.0.0",
+  "description": "review service",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "pg": "^8.7.1",
+    "postgres": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rfp55-sdc-OldMan/Reviews-API.git"
+  },
+  "author": "qinyu zhu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rfp55-sdc-OldMan/Reviews-API/issues"
+  },
+  "homepage": "https://github.com/rfp55-sdc-OldMan/Reviews-API#readme"
+}
