@@ -56,26 +56,26 @@ CREATE TABLE reviews_photos(
 
 
 COPY products
-FROM '/Users/zhuqinyu/HR/SDC/product.csv'
+FROM '/Users/zhuqinyu/HR/SDC/Reviews-API/server/db/product.csv'
 DELIMITER ','
 CSV HEADER;
 
 COPY reviews
-FROM '/Users/zhuqinyu/HR/SDC/reviews.csv'
+FROM '/Users/zhuqinyu/HR/SDC/Reviews-API/server/db/reviews.csv'
 DELIMITER ','
 CSV HEADER;
 
 COPY characteristics
-FROM '/Users/zhuqinyu/HR/SDC/characteristics.csv'
+FROM '/Users/zhuqinyu/HR/SDC/Reviews-API/server/db/characteristics.csv'
 DELIMITER ','
 CSV HEADER;
 
 COPY characteristic_reviews
-FROM '/Users/zhuqinyu/HR/SDC/characteristic_reviews.csv'
+FROM '/Users/zhuqinyu/HR/SDC/Reviews-API/server/db/characteristic_reviews.csv'
 DELIMITER ','
 CSV HEADER;
 
 COPY reviews_photos
-FROM '/Users/zhuqinyu/HR/SDC/reviews_photos.csv'
+FROM '/Users/zhuqinyu/HR/SDC/Reviews-API/server/db/reviews_photos.csv'
 DELIMITER ','
 CSV HEADER;

@@ -1,4 +1,17 @@
+const { Pool } = require('pg');
+// const pool = new Pool();
 
+const pool = new Pool({
+  user: 'zhuqinyu',
+  host: 'localhost',
+  database: 'review_service',
+  password: '',
+  port: 5432,
+});
+
+module.exports = {
+  query: (text, params) => pool.query(text, params),
+};
 
 // pool.query('SELECT NOW()', (err, res) => {
 //   console.log('test pool.query');
@@ -23,7 +36,6 @@
 //   client.end();
 // });
 
-
 // async function getReview() {
 //   console.log('test in db');
 //   // const review = 'SELECT * FROM reviews LIMIT 5';
@@ -35,6 +47,4 @@
 //   );
 // }
 
-
-
-// module.exports = pool;
+// module.exports = { getReview }pool;
