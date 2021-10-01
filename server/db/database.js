@@ -41,7 +41,6 @@ const getPhoto = 'SELECT * FROM reviews_photos LIMIT 10';
 const getValue = 'SELECT * FROM characteristic_reviews LIMIT 10';
 const getChara = 'SELECT * FROM characteristics LIMIT 10';
 
-
 pool
   .connect()
   .then((client) => {
@@ -62,6 +61,36 @@ pool
   .then((client) => {
     return client
       .query(getPhoto)
+      .then((res) => {
+        client.release()
+        console.log(res.rows)
+      })
+      .catch(err => {
+        client.release()
+        console.log(err.stack)
+      })
+  });
+
+  pool
+  .connect()
+  .then((client) => {
+    return client
+      .query(getChara)
+      .then((res) => {
+        client.release()
+        console.log(res.rows)
+      })
+      .catch(err => {
+        client.release()
+        console.log(err.stack)
+      })
+  });
+
+  pool
+  .connect()
+  .then((client) => {
+    return client
+      .query(getValue)
       .then((res) => {
         client.release()
         console.log(res.rows)
