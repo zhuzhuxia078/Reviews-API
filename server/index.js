@@ -1,8 +1,6 @@
 const express = require('express');
 const { Pool } = require('pg');
 
-
-
 const app = express();
 
 const port = process.env.PORT || 2000;
@@ -26,30 +24,28 @@ pool.on('error', (err, client) => {
   process.exit(-1);
 });
 
-const getReview = 'SELECT * FROM reviews LIMIT 10';
+// const getReview = 'SELECT * FROM reviews LIMIT 10';
 const getPhoto = 'SELECT * FROM reviews_photos LIMIT 10';
 const getValue = 'SELECT * FROM characteristic_reviews LIMIT 10';
 const getChara = 'SELECT * FROM characteristics LIMIT 10';
 
-
 app.get('/reviews', (req, res) => {
   const getReview = 'SELECT * FROM reviews LIMIT 10';
   pool
-  .connect()
-  .then((client) => {
-    return client
-      .query(getReview)
-      .then((res) => {
-        client.release()
-        console.log(res.rows)
-      })
-      .catch(err => {
-        client.release()
-        console.log(err.stack)
-      })
+    .connect()
+    .then((client) => {
+      return client
+        .query(getReview)
+        .then((res) => {
+          client.release()
+          console.log(res.rows)
+        })
+        .catch(err => {
+          client.release()
+          console.log(err.stack)
+        })
   });
-})
-
+});
 
   pool
   .connect()
@@ -79,7 +75,7 @@ app.get('/reviews', (req, res) => {
         client.release()
         console.log(err.stack)
       })
-  });
+  })
 
   pool
   .connect()
