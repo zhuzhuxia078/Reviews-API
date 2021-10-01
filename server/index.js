@@ -1,4 +1,5 @@
 const express = require('express');
+const db = require('./db/database.js');
 
 const app = express();
 
@@ -9,6 +10,7 @@ app.use(express.json());
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
+
 
 
 app.listen(port, () => {
