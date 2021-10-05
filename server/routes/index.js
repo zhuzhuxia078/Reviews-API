@@ -9,6 +9,4 @@ module.exports = (app) => {
   app.use('/', home);
   app.use('/reviews/', reviews, helpful, report);
   app.use('/reviews/meta', meta);
-  // app.use('/reviews/', helpful, report);
-  // app.use('/photos', photos)
 };
