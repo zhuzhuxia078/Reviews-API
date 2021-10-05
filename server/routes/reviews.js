@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
   reviews.summary,
   reviews.recommend,
   reviews.body,
-  reviews.date,
+  to_timestamp(reviews.date/1000) AS date,
   reviews.reviewer_name,
   reviews.helpfulness,
   JSON_AGG(json_build_object('id', reviews_photos.id, 'url', reviews_photos.url)) as photos
