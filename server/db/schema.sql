@@ -94,7 +94,16 @@ CSV HEADER;
 
 -- create index
 CREATE INDEX reviews_product_id_idx ON reviews USING hash(product_id);
+CREATE INDEX reviews_review_id_hash_idx ON reviews USING hash(review_id);
+CREATE INDEX reviews_photos_review_id ON reviews_photos USING hash(review_id);
 
+-- CREATE INDEX characteristics_id_hash_idx ON characteristics USING hash(id);
+
+CREATE INDEX cr_review_id_hash_idx ON characteristic_reviews USING hash(review_id);
+CREATE INDEX cr_c_id_hash_idx ON characteristic_reviews USING hash(characteristics_id);
+CREATE INDEX cr_r_id ON characteristic_reviews USING hash(review_id);
+
+CREATE INDEX cr_product_id_idx ON characteristics USING hash(product_id);
 -- SELECT *
 -- from reviews
 -- LEFT [OUTER] JOIN (
