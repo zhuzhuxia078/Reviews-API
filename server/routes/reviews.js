@@ -41,10 +41,11 @@ router.post('/', jsonParser, async (req, res) => {
     product_id, summary, body, name, email, rating, recommend
   } = req.body;
   // const date = new Date().toISOString();
-  // console.log('date: (want bigint)', date);
-  const qparam = [rating, recommend, body, name, product_id, email, summary];
-  const text = `INSERT INTO reviews (rating, recommend, body, reviewer_name, product_id, reviewer_email, summary, reported)
-  VALUES ($1, $2, $3, $4, $5, $6, $7, false)`;
+  const date = Date.now();
+  console.log('date: (want bigint)', date);
+  const qparam = [rating, recommend, body, name, product_id, email, summary, date];
+  const text = `INSERT INTO reviews (rating, recommend, body, reviewer_name, product_id, reviewer_email, summary, date, reported)
+  VALUES ($1, $2, $3, $4, $5, $6, $7, $8, false)`;
   const result = await db.query(text, qparam);
   res.status(201).send(result);
 });

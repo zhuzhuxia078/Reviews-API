@@ -111,3 +111,5 @@ package-lock.json
 
 # ignore csv file
 *.csv
+
+.DS_Store
