@@ -92,6 +92,9 @@ FROM '/Users/zhuqinyu/HR/SDC/Reviews-API/server/db/reviews_photos.csv'
 DELIMITER ','
 CSV HEADER;
 
+-- create index
+CREATE INDEX reviews_product_id_idx ON reviews USING hash(product_id);
+
 -- SELECT *
 -- from reviews
 -- LEFT [OUTER] JOIN (
