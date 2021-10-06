@@ -7,7 +7,7 @@ export const options = {
     { duration: '1s', target: 1 },
     { duration: '1s', target: 10 },
     { duration: '1s', target: 100 },
-    { duration: '1s', target: 1000 },
+    // { duration: '1s', target: 1000 },
 
     //{ duration: '1s', target: 1000 },
   ],
