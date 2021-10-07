@@ -8,15 +8,15 @@
   -- \i shema.sql
 
 
--- DROP DATABASE IF EXISTS review_service;
+DROP DATABASE IF EXISTS review_service;
 
--- CREATE DATABASE review_service;
+CREATE DATABASE review_service;
 
--- DROP TABLE IF EXISTS products;
--- DROP TABLE IF EXISTS reviews;
--- DROP TABLE IF EXISTS characteristics;
--- DROP TABLE IF EXISTS characteristic_reviews;
--- DROP TABLE IF EXISTS reviews_photos;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS reviews;
+DROP TABLE IF EXISTS characteristics;
+DROP TABLE IF EXISTS characteristic_reviews;
+DROP TABLE IF EXISTS reviews_photos;
 CREATE TABLE products (
   product_id SERIAL PRIMARY KEY,
   name VARCHAR,
