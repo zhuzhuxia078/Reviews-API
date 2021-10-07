@@ -1,12 +1,24 @@
 const { Pool } = require('pg');
 
 const pool = new Pool({
-  user: 'zhuqinyu',
-  host: 'localhost',
-  database: 'review_service',
+  user: 'postgres',
+  host: '18.188.217.138',
+  database: 'postgres',
   password: '',
   port: 5432,
 });
+
+/* This is the local database */
+
+// const pool = new Pool({
+//   user: 'zhuqinyu',
+//   host: 'localhost',
+//   database: 'review_service',
+//   password: '',
+//   port: 5432,
+// });
+
+/* upward is the locat database */
 
 // // Get photos
 // const getPhotos = (reviewIDs) => {
