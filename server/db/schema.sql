@@ -4,6 +4,9 @@
 -- to execute this file
   -- psql -d review_service -a -f schema.sql
 
+  -- or??
+  -- \i shema.sql
+
 
 -- DROP DATABASE IF EXISTS review_service;
 
@@ -67,6 +70,14 @@ CREATE TABLE reviews_photos(
 );
 
 -- ETL
+-- ubuntu pwd: /home/ubuntu/reviews/db
+  -- COPY products FROM '/home/ubuntu/reviews/db/product.csv' DELIMITER ',' CSV HEADER;
+  -- COPY reviews FROM '/home/ubuntu/reviews/db/reviews.csv' DELIMITER ',' CSV HEADER;
+  -- COPY characteristics FROM '/home/ubuntu/reviews/db/characteristics.csv' DELIMITER ',' CSV HEADER;
+  -- COPY characteristic_reviews FROM '/home/ubuntu/reviews/db/characteristic_reviews.csv' DELIMITER ',' CSV HEADER;
+  -- COPY reviews_photos FROM '/home/ubuntu/reviews/db/reviews_photos.csv' DELIMITER ',' CSV HEADER;
+
+
 COPY products
 FROM '/Users/zhuqinyu/HR/SDC/Reviews-API/server/db/product.csv'
 DELIMITER ','
