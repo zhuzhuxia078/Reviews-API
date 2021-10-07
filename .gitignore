@@ -115,3 +115,5 @@ package-lock.json
 *.DS_Store
 
 newrelic_key.js
+
+server/db/config.js
